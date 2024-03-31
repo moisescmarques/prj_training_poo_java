@@ -9,9 +9,9 @@ public enum Genero {
 
     private Genero(double fator){
         this.fator = fator;
-   }
+    }
 
-   public double getFator() {
+    public double getFator() {
        return fator;
-   }
+    }
 }

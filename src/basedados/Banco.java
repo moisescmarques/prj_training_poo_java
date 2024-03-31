@@ -16,13 +16,16 @@ public class Banco {
         this.listProdutos = new ArrayList<>();
         this.listPedidos = new ArrayList<>();
         this.listCupons = new ArrayList<>();
-        this.cliente = new Cliente();
+        this.cliente = new Cliente("Moises", "456");
     }
 
     public Cliente getCliente() {
         return cliente;
     }
-    
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
     public List<Cupom> getListCupons() {
         return listCupons;
     }
@@ -39,9 +42,9 @@ public class Banco {
         listProdutos.add(tipoProduto);
     }
 
-    public void removerProduto(int codigo){
+    public void removerProduto(String codigo){
         for (Produto produto: listProdutos){
-            if(produto.getCodigo() == codigo){
+            if(produto.getCodigo().equalsIgnoreCase(codigo)){
                 listProdutos.remove(produto);
             }
         }
@@ -51,9 +54,9 @@ public class Banco {
         listPedidos.add(pedido);
     }
     
-    public void removerPedido(int codigo){
+    public void removerPedido(String codigo){
         for (Produto pedido: listProdutos){
-            if(pedido.getCodigo() == codigo){
+            if(pedido.getCodigo().equalsIgnoreCase(codigo)){
                 listProdutos.remove(pedido);
             }
         }

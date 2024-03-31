@@ -1,11 +1,20 @@
 package entidade;
 
+import java.util.List;
+import java.util.Optional;
+
 public class Pedido {
     
     private String codigo;
     private Cliente cliente;
-    private List<Produtos> listProdutos;
+    private List<Produto> listProdutos;
     private double total;
+
+    /* public Pedido(String codigo, Cliente cliente, List produtos){
+        this.codigo = codigo;
+        this.cliente = cliente;
+        this.listProdutos = produtos;
+    } */
 
     public String getCodigo() {
         return codigo;
@@ -22,11 +31,11 @@ public class Pedido {
         this.cliente = cliente;
     }
 
-    public List<Produtos> getListProdutos() {
+    public List<Produto> getListProdutos() {
         return listProdutos;
     }
     
-    public void setListProdutos(List<Produtos> listProdutos) {
+    public void setListProdutos(List<Produto> listProdutos) {
         this.listProdutos = listProdutos;
     }
 

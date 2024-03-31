@@ -16,6 +16,6 @@
 ## Proposta resumida do Projeto
     Criar um sistema para uma loja que vende livros e cadernos. 
     O cliente dessa loja devem conseguir fazer seus pedidos e ao fim ter o frete calculo.
-    Deve ser possivel utilizar cupom de desconsto (caso exista).
+    Deve ser possivel utilizar cupom de desconto (caso exista).
 
 

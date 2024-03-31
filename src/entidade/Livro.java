@@ -2,10 +2,18 @@ package entidade;
 
 import entidade.constantes.Genero;
 
-public class Livro {
+public class Livro extends Produto{
+    
     
     private String nome;
     private Genero genero;
+
+    public Livro(String nome, String genero, double preco) {
+        this.nome = nome;
+        setGenero(Genero.valueOf((genero.toUpperCase())));
+        setPreco(preco);
+        this.setCodigo("Livro");
+    }
 
     public String getNome() {
         return nome;
@@ -23,6 +31,14 @@ public class Livro {
         this.genero = genero;
     }
 
-    
+    @Override
+    public double calcularFrete() {
+        return (getPreco() * getQuantidade() * (1 + genero.getFator()));
+    }
+
+    @Override
+    public String toString() {
+        return "Livro {Codigo = '" + getCodigo() + "', Nome = '"+ nome + "', Genero = '" + genero + "'}";
+    }
     
 }
